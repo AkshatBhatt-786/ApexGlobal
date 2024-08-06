@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.error-page {
+    text-align: center;
+    padding: 5% 10%;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page h1 {
+    font-size: 100px;
+    color: #dc3545;
+    margin: 0;
+    animation: bounceIn 1.5s;
+}
+
+.error-page p {
+    font-size: 24px;
+    color: #6c757d;
+    margin: 20px 0;
+    animation: fadeIn 2s;
+}
+
+.error-page a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: all 0.3s;
+}
+
+.error-page a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+/* Keyframes for animations */
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+</style>
+<main>
+    <section class="error-page">
+        <h1>404</h1>
+        <p>Sorry, the page you are looking for does not exist.</p>
+        <a href="{{ url_for('index') }}">Go back to the home page</a>
+    </section>
+</main>
+{% endblock %}

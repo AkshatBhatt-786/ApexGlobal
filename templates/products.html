@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Products - Apex Global{% endblock %}
+
+{% block content %}
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/machinery_spare_parts.jpg') }}" alt="Machine Spare Parts">
+                    <h3>Machinery Spare Parts</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/engine_spare_parts.jpg') }}" alt="Engine Spare Parts">
+                    <h3>Engine Spare Parts</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/induction_vertical_mounted_motar.jpg') }}" alt="Induction Vertical Motor">
+                    <h3>Induction Vertical Motor</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/DGSET.webp') }}" alt="Engine Spare Parts">
+                    <h3>D.G sets</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/air_compressor2.jpg') }}" alt="Engine Spare Parts">
+                    <h3>Air Compressor</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/OilPurifier.webp') }}" alt="Engine Spare Parts">
+                    <h3>Oil Purifier</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/waterpump.jpeg') }}" alt="Engine Spare Parts">
+                    <h3>WaterPump</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/turning_gear.jpeg') }}" alt="Engine Spare Parts">
+                    <h3>Turning Gear</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

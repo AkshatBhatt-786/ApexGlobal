@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Apex Global{% endblock %}
+<style>
+    
+/* About Page Styles */
+.about {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 2;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+{% block content %}
+    <!-- About Section -->
+    <section class="about">
+        <div class="container about-content">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="About Apex Global">
+            </div>
+            <div class="about-text">
+                <h2>About Apex Global</h2>
+                <p>
+                    Apex Global is a leading provider of innovative machinery solutions based in Bhavnagar. 
+                    Established with a commitment to excellence, we specialize in delivering high-quality industrial automation equipment and services to clients around the world. 
+                    Our diverse product portfolio includes cutting-edge control panels, power supplies, and other essential components for various automation applications.
+                </p>
+                <p>
+                    With a focus on reliability and customer satisfaction, we ensure that our solutions are tailored to meet the specific needs of each client. Our dedicated team of experts works closely with customers to provide exceptional support and technical guidance. 
+                    Discover how Apex Global can assist you in achieving your automation goals and enhancing your industrial processes.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

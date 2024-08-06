@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Apex Global{% endblock %}
+
+{% block content %}
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <h1>Welcome to Apex Global</h1>
+            <p>Your partner in innovative machinery solutions.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container about-content">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="About Image">
+            </div>
+            <div class="about-text">
+                <h2>About Apex Global</h2>
+                <p>
+                    Apex Global is a leading provider of innovative machinery solutions based in Bhavnagar. Since our establishment, we have been committed to delivering top-quality industrial automation equipment and services to clients worldwide. Our extensive range of products includes cutting-edge control panels, power supplies, and other automation components.
+                    Discover more about our offerings and how we can assist you in achieving your automation goals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Installation</h3>
+                    <p>Professional installation of machinery and automation systems.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Maintenance</h3>
+                    <p>Comprehensive maintenance services to ensure optimal performance.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Customization</h3>
+                    <p>Customized solutions tailored to meet specific client requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/induction_motar.jpg') }}" alt="Induction Motor">
+                    <h3>ACDC Motor</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/air_compressor2.jpg') }}" alt="Product 3">
+                    <h3>Air Compressor</h3>
+                </div>
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/induction_vertical_mounted_motar.jpg') }}" alt="Product 4">
+                    <h3>Induction Vertical Motar</h3>
+                </div>
+            </div>
+            <div class="see-more">
+                <a href="{{ url_for('products') }}" class="btn-see-more">See More Products</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
